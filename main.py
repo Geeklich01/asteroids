@@ -35,6 +35,10 @@ def main():
         for drbl in drawable:
             drbl.draw(screen)
         pygame.display.flip()
+        for asteroid in asteroids:
+            if player.isColliding(asteroid):
+                print(f"Game over!")
+                return
 
 if __name__ == "__main__":
     main()
